@@ -17,6 +17,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .visually-hidden {
@@ -29,4 +30,10 @@ img {
   white-space: nowrap;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+h2 {
+  @include font-title;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.03em;
 }

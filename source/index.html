@@ -34,13 +34,13 @@
           </div>
           <ul class="header__social-list">
             <li>
-              <a class="header__social-link" href="#">FB</a>
+              <a href="#">FB</a>
             </li>
             <li>
-              <a class="header__social-link" href="#">VK</a>
+              <a href="#">VK</a>
             </li>
             <li>
-              <a class="header__social-link" href="#">IG</a>
+              <a href="#">IG</a>
             </li>
           </ul>
         </div>
@@ -48,91 +48,98 @@
     </header>
     <main>
       <section class="gym" id="gym">
-        <h2 class="gym__title">Тренажерный зал</h2>
-        <h3 class="gym__subtitle">Просторный зал площадью 900 кв/м</h3>
-        <p class="gym__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов. В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
-        </p>
-        <img src="img/gym-desktop@1x.png" srcset="img/gym-desktop@2x.png 2x" alt="Фото тренажерного зала" width="640" height="401">
+        <div class="gym__description">
+          <h2>Тренажерный зал</h2>
+          <h3>Просторный зал площадью 900 кв/м</h3>
+          <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+          <p class="gym__text-desktop">  В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+          </p>
+        </div>
+        <div class="gym__image">
+          <img src="img/gym-desktop@1x.png" srcset="img/gym-desktop@2x.png 2x" alt="Фото тренажерного зала" width="660" height="401">
+        </div>
         <div class="gym__player">
           <img src="img/video-desktop@1x.png" srcset="img/video-desktop@2x.png 2x" alt="Видеопрезентация тренажерного зала" width="364" height="228">
           <button class="gym__player-button button" type="button" aria-label="Включить видеозапись"></button>
         </div>
       </section>
       <section class="tabs" id="membership">
-        <h2 class="tabs__title">Абонементы</h2>
-        <ul class="tabs__header">
-          <li class="tabs__header-item tabs__trigger active" data-tab="1">1 месяц</li>
-          <li class="tabs__header-item tabs__trigger" data-tab="2">6 месяцев</li>
-          <li class="tabs__header-item tabs__trigger" data-tab="3">12 месяцев</li>
-        </ul>
-        <ul class="tabs__content">
-          <li class="tabs__membership membership active" data-tab="1">
-            <ul class="membership__list">
-              <li class="membership__item">
-                <h4 class="membership__title">С тренером</h4>
-                <p class="membership__desc">12 занятий</p>
-                <p class="membership__price">5000</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Дневной</h4>
-                <p class="membership__desc">1с 8:00 до 17:00 </p>
-                <p class="membership__price">1700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Полный день</h4>
-                <p class="membership__desc">с 8:00 до 22:00 </p>
-                <p class="membership__price">2700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </li>
-          <li class="tabs__membership membership active" data-tab="2">
-            <ul class="membership__list">
-              <li class="membership__item">
-                <h4 class="membership__title">С тренером</h4>
-                <p class="membership__desc">12 занятий</p>
-                <p class="membership__price">5000</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Дневной</h4>
-                <p class="membership__desc">1с 8:00 до 17:00 </p>
-                <p class="membership__price">1700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Полный день</h4>
-                <p class="membership__desc">с 8:00 до 22:00 </p>
-                <p class="membership__price">2700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </li>
-          <li class="tabs__membership membership active" data-tab="3">
-            <ul class="membership__list">
-              <li class="membership__item">
-                <h4 class="membership__title">С тренером</h4>
-                <p class="membership__desc">12 занятий</p>
-                <p class="membership__price">5000</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Дневной</h4>
-                <p class="membership__desc">1с 8:00 до 17:00 </p>
-                <p class="membership__price">1700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-              <li class="membership__item">
-                <h4 class="membership__title">Полный день</h4>
-                <p class="membership__desc">с 8:00 до 22:00 </p>
-                <p class="membership__price">2700</p>
-                <a class="membership__button button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="tabs__wrapper">
+          <h2 class="tabs__title">Абонементы</h2>
+          <ul class="tabs__header">
+            <li class="tabs__trigger active" data-tab="1">1 месяц</li>
+            <li class="tabs__trigger" data-tab="2">6 месяцев</li>
+            <li class="tabs__trigger" data-tab="3">12 месяцев</li>
+          </ul>
+          <ul class="tabs__content">
+            <li class="tabs__membership membership active" data-tab="1">
+              <ul class="membership__list">
+                <li class="membership__item">
+                  <h4 class="membership__title">С тренером</h4>
+                  <p class="membership__desc">12 занятий</p>
+                  <h5 class="membership__price">5000</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Дневной</h4>
+                  <p class="membership__desc">с 8:00 до 17:00 </p>
+                  <h5 class="membership__price">1700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Полный день</h4>
+                  <p class="membership__desc">с 8:00 до 22:00 </p>
+                  <h5 class="membership__price">2700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__membership membership" data-tab="2">
+              <ul class="membership__list">
+                <li class="membership__item">
+                  <h4 class="membership__title">С тренером</h4>
+                  <p class="membership__desc">12 занятий</p>
+                  <h5 class="membership__price">5000</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Дневной</h4>
+                  <p class="membership__desc">с 8:00 до 17:00 </p>
+                  <h5 class="membership__price">1700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Полный день</h4>
+                  <p class="membership__desc">с 8:00 до 22:00 </p>
+                  <h5 class="membership__price">2700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__membership membership" data-tab="3">
+              <ul class="membership__list">
+                <li class="membership__item">
+                  <h4 class="membership__title">С тренером</h4>
+                  <p class="membership__desc">12 занятий</p>
+                  <h5 class="membership__price">5000</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Дневной</h4>
+                  <p class="membership__desc">с 8:00 до 17:00 </p>
+                  <h5 class="membership__price">1700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+                <li class="membership__item">
+                  <h4 class="membership__title">Полный день</h4>
+                  <p class="membership__desc">с 8:00 до 22:00 </p>
+                  <h5 class="membership__price">2700</h5>
+                  <a class="membership__button button" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="crossfit">
         <div class="crossfit__title-wrapper">
@@ -351,5 +358,8 @@
         </li>
       </ul>
     </footer>
+
+    <script src="js/main.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,45 @@
+.tabs {
+  margin-top: 200px;
+  background-color: $light-grey;
+
+  ul {
+    @include reset-list;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    padding-top: 50px;
+  }
+}
+
+.tabs__wrapper {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tabs__header {
+  width: auto;
+  display: flex;
+  border-bottom: 2px solid $grey-border;
+  margin-bottom: 50px;
+
+  li {
+    @include font-info (20px, 400, 30px);
+    color: $darkgrey;
+    margin-right: 40px;
+    padding-bottom: 20px;
+    cursor: pointer;
+
+    &.active {
+      color: $blue-text;
+      border-bottom: 2px solid $red;
+    }
+  }
+}
+
+.tabs__content {
+  display: flex;
+}
