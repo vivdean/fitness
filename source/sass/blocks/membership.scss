@@ -1,5 +1,9 @@
 .membership {
   display: none;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .membership.active {
@@ -7,9 +11,19 @@
 }
 
 .membership__list {
-  @include container;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -40px;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 
   li {
     width: 360px;
@@ -19,9 +33,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
-    border: 7px solid transparent;
+    padding-bottom: 58px;
     box-sizing: border-box;
+    border: 7px solid transparent;
 
     &:hover {
       border: 7px solid $blue-linear;
@@ -33,6 +47,16 @@
         color: $white;
         border: none;
       }
+    }
+
+    @media (max-width: $tablet) {
+      width: 420px;
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
 
@@ -47,6 +71,17 @@
     color: $blue-number;
     position: relative;
     padding-right: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+    }
 
     &::after {
       @include pseudo;
@@ -61,6 +96,7 @@
   p {
     @include font-info(16px, 400, 24px);
     color: $grey-text;
+    margin-top: 20px;
   }
 
   a {

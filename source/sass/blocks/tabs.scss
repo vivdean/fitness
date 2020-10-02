@@ -1,10 +1,17 @@
 .tabs {
   margin-top: 200px;
-  background-color: $light-grey;
+  background: url("../img/plates@1x.png"), linear-gradient(180deg, $light-grey 93%, $white 93%);
+  background-repeat: no-repeat;
+  background-position: bottom right, center;
+  background-size: 221px 374px, auto;
+  overflow: hidden;
+
+  @media (max-width: $mobile) {
+    background: linear-gradient(180deg, $light-grey 93%, $white 93%);
+  }
 
   ul {
     @include reset-list;
-    margin-bottom: 50px;
   }
 
   h2 {
@@ -18,6 +25,11 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 150px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 150px;
+  }
 }
 
 .tabs__header {
@@ -25,6 +37,8 @@
   display: flex;
   border-bottom: 2px solid $grey-border;
   margin-bottom: 50px;
+  margin-right: -40px;
+  overflow: hidden;
 
   li {
     @include font-info (20px, 400, 30px);
@@ -37,9 +51,21 @@
       color: $blue-text;
       border-bottom: 2px solid $red;
     }
+
+    @media (max-width: $tablet) {
+      @include font-info (20px, 400, 30px);
+    }
+
+    @media (max-width: $mobile) {
+      @include font-info (16px, 400, 24px);
+    }
   }
 }
 
 .tabs__content {
   display: flex;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
