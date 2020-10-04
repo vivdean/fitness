@@ -26,6 +26,7 @@
   }
 
   li {
+    font-family: "Tahoma", sans-serif;
     width: 360px;
     min-height: 448px;
     background-color: $white;
@@ -69,28 +70,13 @@
   h5 {
     @include font-info(60px, 700, 90px);
     color: $blue-number;
-    position: relative;
-    padding-right: 40px;
     margin-top: 60px;
     margin-bottom: 50px;
+  }
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      width: 80px;
-      height: 80px;
-    }
-
-    &::after {
-      @include pseudo;
-      background-image: url("../img/ruble.svg");
-      top: 22px;
-      right: 0;
-      width: 30px;
-      height: 42px;
-    }
+  span {
+    @include font-info(60px, 700, 90px);
+    color: $blue-text;
   }
 
   p {

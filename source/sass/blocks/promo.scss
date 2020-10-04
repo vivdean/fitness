@@ -1,0 +1,117 @@
+.promo {
+  @include container;
+  background-image: url("../img/promo-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: $red;
+  color: $white;
+  min-height: 500px;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+    margin: 0 6%;
+    background-image: url("../img/promo-tablet@1x.png");
+    min-height: 292px;
+  }
+
+  @media (max-width: $mobile) {
+    background-position: bottom center;
+    min-height: 584px;
+    margin: 0 5%;
+  }
+}
+
+.promo__wrapper {
+  width: 30%;
+  padding: 87px 78px;
+
+  a {
+    padding: 30px;
+    width: 100%;
+    margin-top: 18px;
+
+    @media (max-width: $tablet) {
+      padding: 16px;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+
+    @media (max-width: $tablet) {
+      @include font-info(12px, 400, 18px);
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 46px 7%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 46px 15%;
+  }
+}
+
+.promo__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    @include font-info(90px, 700, 90px);
+    max-width: 201px;
+    margin: 0;
+
+    @media (max-width: $tablet) {
+      @include font-info(52px, 700, 52px);
+    }
+  }
+
+  p {
+    @include font-info(18px, 400, 27px);
+    border-bottom: 1px solid $white;
+    margin: 0;
+    padding-bottom: 3px;
+
+    @media (max-width: $tablet) {
+      @include font-info(12px, 400, 18px);
+    }
+  }
+
+  b {
+    @include font-info(40px, 700, 60px);
+
+    @media (max-width: $tablet) {
+      @include font-info(24px, 700, 36px);
+    }
+  }
+
+  span {
+    @include font-info(14px, 400, 21px);
+
+    @media (max-width: $tablet) {
+      @include font-info(10px, 400, 15px);
+    }
+  }
+}
+
+.promo__date-wrap,
+.promo__month-year {
+  display: flex;
+}
+
+.promo__month-year {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  @media (max-width: $tablet) {
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+}

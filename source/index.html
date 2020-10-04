@@ -67,9 +67,9 @@
         <div class="tabs__wrapper">
           <h2 class="tabs__title">Абонементы</h2>
           <ul class="tabs__header">
-            <li class="tabs__trigger active" data-tab="1">1 месяц</li>
-            <li class="tabs__trigger" data-tab="2">6 месяцев</li>
-            <li class="tabs__trigger" data-tab="3">12 месяцев</li>
+            <li class="tabs__trigger active" data-tab="1" tabindex="0">1 месяц</li>
+            <li class="tabs__trigger" data-tab="2" tabindex="0">6 месяцев</li>
+            <li class="tabs__trigger" data-tab="3" tabindex="0">12 месяцев</li>
           </ul>
           <ul class="tabs__content">
             <li class="tabs__membership membership active" data-tab="1">
@@ -77,19 +77,19 @@
                 <li class="membership__item">
                   <h4 class="membership__title">С тренером</h4>
                   <p class="membership__desc">12 занятий</p>
-                  <h5 class="membership__price">5000</h5>
+                  <h5 class="membership__price">5000 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Дневной</h4>
                   <p class="membership__desc">с 8:00 до 17:00 </p>
-                  <h5 class="membership__price">1700</h5>
+                  <h5 class="membership__price">1700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Полный день</h4>
                   <p class="membership__desc">с 8:00 до 22:00 </p>
-                  <h5 class="membership__price">2700</h5>
+                  <h5 class="membership__price">2700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
@@ -99,19 +99,19 @@
                 <li class="membership__item">
                   <h4 class="membership__title">С тренером</h4>
                   <p class="membership__desc">12 занятий</p>
-                  <h5 class="membership__price">5000</h5>
+                  <h5 class="membership__price">5000 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Дневной</h4>
                   <p class="membership__desc">с 8:00 до 17:00 </p>
-                  <h5 class="membership__price">1700</h5>
+                  <h5 class="membership__price">1700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Полный день</h4>
                   <p class="membership__desc">с 8:00 до 22:00 </p>
-                  <h5 class="membership__price">2700</h5>
+                  <h5 class="membership__price">2700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
@@ -121,19 +121,19 @@
                 <li class="membership__item">
                   <h4 class="membership__title">С тренером</h4>
                   <p class="membership__desc">12 занятий</p>
-                  <h5 class="membership__price">5000</h5>
+                  <h5 class="membership__price">5000 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Дневной</h4>
                   <p class="membership__desc">с 8:00 до 17:00 </p>
-                  <h5 class="membership__price">1700</h5>
+                  <h5 class="membership__price">1700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
                 <li class="membership__item">
                   <h4 class="membership__title">Полный день</h4>
                   <p class="membership__desc">с 8:00 до 22:00 </p>
-                  <h5 class="membership__price">2700</h5>
+                  <h5 class="membership__price">2700 <span class="membership__ruble">&#8381</span></h5>
                   <a class="membership__button button" href="#">Купить абонемент</a>
                 </li>
               </ul>
@@ -141,119 +141,213 @@
           </ul>
         </div>
       </section>
-      <section class="crossfit">
-        <div class="crossfit__title-wrapper">
-          <h2 class="crossfit__title">Super games</h2>
-          <div class="crossfit__date-wrap">
-            <p class="crossfit__date-description">дата</p>
-            <b class="crossfit__date">7</b>
-            <p class="crossfit__month-year">марта 2019</p>
-            <p class="crossfit__time-description">время</p>
-            <b class="crossfit__time">12:00</b>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <div class="promo__title-wrapper">
+            <h2 class="promo__title">Super games</h2>
+            <div class="promo__date-wrapper">
+              <p class="promo__date-description">Дата</p>
+              <div class="promo__date-wrap">
+                <b class="promo__date">7</b>
+                <div class="promo__month-year">
+                  <span>Марта</span>
+                  <span>2019</span>
+                </div>
+              </div>
+              <p class="promo__time-description">Время</p>
+              <b class="promo__time">12:00</b>
+            </div>
           </div>
-          <p class="crossfit__text">Ежегодные соревнования по CrossFit</p>
-          <a class="crossfit__button button" href="#">Заполнить заявку</a>
+          <p class="promo__text">Ежегодные соревнования по CrossFit</p>
+          <a class="promo__button button" href="#">Заполнить заявку</a>
         </div>
-        <img src="img/crossfit-desktop@1x.png" srcset="img/crossfit-desktop@2x.png 2x" alt="Фото спортсмена" width="660" height="500">
       </section>
       <section class="trainers" id="trainers">
         <h2 class="trainers__title">Тренеры</h2>
         <div class="trainers__slider trainers-slider">
-          <a class="trainers-slider__control trainers-slider__control-prev" href="#"></a>
-          <ul class="trainers-slider__list">
-            <li class="trainers-slider__item">
-              <img src="img/trainer1-desktop@1x.png" srcset="img/trainer1-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
-            </li>
-            <li class="trainers-slider__item">
-              <img src="img/trainer2-desktop@1x.png" srcset="img/trainer2-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
-            </li>
-            <li class="trainers-slider__item">
-              <img src="img/trainer3-desktop@1x.png" srcset="img/trainer3-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
-              <h4 class="trainers-slider__item-title">Александр Пашков</h4>
-              <p class="trainers-slider__item-desc">CrossFit</p>
-              <ul class="trainers-slider__sublist">
-                <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
-                <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
-                <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
-              </ul>
-            </li>
-            <li class="trainers-slider__item">
-              <img src="img/trainer4-desktop@1x.png" srcset="img/trainer4-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
-            </li>
-          </ul>
-          <a class="trainers-slider__control trainers-slider__control-next" href="#"></a>
+          <button class="trainers-slider__control trainers-slider__control-prev" type="button"></button>
+          <div class="trainers-slider__container">
+            <ul class="trainers-slider__list">
+              <li class="trainers-slider__item">
+                <img src="img/trainer1-desktop@1x.png" srcset="img/trainer1-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Анна Павлова</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Анна Павлова</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer2-desktop@1x.png" srcset="img/trainer2-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Алексей Лавров</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Алексей Лавров</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer3-desktop@1x.png" srcset="img/trainer3-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Александр Пашков</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Александр Пашков</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer4-desktop@1x.png" srcset="img/trainer4-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Мария Кетова</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Мария Кетова</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer1-desktop@1x.png" srcset="img/trainer1-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Анна Павлова</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Анна Павлова</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer2-desktop@1x.png" srcset="img/trainer2-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Алексей Лавров</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Алексей Лавров</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer3-desktop@1x.png" srcset="img/trainer3-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Александр Пашков</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Александр Пашков</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="trainers-slider__item">
+                <img src="img/trainer4-desktop@1x.png" srcset="img/trainer4-desktop@2x.png 2x" alt="Фото тренера" width="260" height="294">
+                <p class="trainers-slider__name">Мария Кетова</p>
+                <div class="trainers-slider__info">
+                  <h4 class="trainers-slider__item-title">Мария Кетова</h4>
+                  <span class="trainers-slider__item-desc">CrossFit</span>
+                  <ul class="trainers-slider__sublist">
+                    <li class="trainers-slider__sublist-item">Certified Level 3 Trainer</li>
+                    <li class="trainers-slider__sublist-item">Победитель чемпионата России по CrossFit</li>
+                    <li class="trainers-slider__sublist-item">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="trainers-slider__control trainers-slider__control-next" type="button"></button>
         </div>
       </section>
       <section class="advantages">
-        <h2 class="advantages__title">Наши преимущества</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <div class="advantages__item-data">
-              <p class="advantages__item-number">900</p>
-              <p class="advantages__item-remark">кв/м</p>
-            </div>
-            <div class="advantages__item-desc">
-              <h4 class="advantages__item-title">Площадь </h4>
-              <p class="advantages__item-text">Занимайтесь без очередей и толпучки</p>
-            </div>
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__item-data">
-              <p class="advantages__item-number">350</p>
-              <p class="advantages__item-remark">мест</p>
-            </div>
-            <div class="advantages__item-desc">
-              <h4 class="advantages__item-title">Комфорт</h4>
-              <p class="advantages__item-text">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
-            </div>
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__item-data">
-              <p class="advantages__item-number">100</p>
-              <p class="advantages__item-remark">Тренажеров</p>
-            </div>
-              <p class="advantages__item-text">Современные тренажеры на все группы мышц</p>
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__item-data">
-              <p class="advantages__item-number">70</p>
-              <p class="advantages__item-remark">машин</p>
-            </div>
-            <div class="advantages__item-desc">
-              <h4 class="advantages__item-title">Собственная парковка</h4>
-              <p class="advantages__item-text">Вы всегда найдете место для своей машины на нашей парковке</p>
-            </div>
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__item-data">
-              <p class="advantages__item-number">5+</p>
-              <p class="advantages__item-remark">лет</p>
-            </div>
-            <div class="advantages__item-desc">
-              <h4 class="advantages__item-title">Тренерский опыт</h4>
-              <p class="advantages__item-text">Добивайтесь своих целей быстрее с профессиональным тренером</p>
-            </div>
-          </li>
-        </ul>
+        <div class="advantages__wrapper">
+          <h2 class="advantages__title">Наши преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__item-data">
+                <b class="advantages__item-number">900</b>
+                <span class="advantages__item-remark">кв/м</span>
+              </div>
+              <div class="advantages__item-desc">
+                <h4 class="advantages__item-title">Площадь </h4>
+                <p class="advantages__item-text">Занимайтесь без очередей и толпучки</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-data">
+                <b class="advantages__item-number">70</b>
+                <span class="advantages__item-remark">машин</span>
+              </div>
+              <div class="advantages__item-desc">
+                <h4 class="advantages__item-title">Собственная парковка</h4>
+                <p class="advantages__item-text">Вы всегда найдете место для своей машины на нашей парковке</p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--center">
+              <div class="advantages__item-data advantages__item-data--center">
+                <b class="advantages__item-number">100</b>
+                <span class="advantages__item-remark">Тренажеров</span>
+              </div>
+                <p class="advantages__item-text">Современные тренажеры на все группы мышц</p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-data">
+                <b class="advantages__item-number">350</b>
+                <span class="advantages__item-remark">мест</span>
+              </div>
+              <div class="advantages__item-desc">
+                <h4 class="advantages__item-title">Комфорт</h4>
+                <p class="advantages__item-text">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-data">
+                <b class="advantages__item-number">5+</b>
+                <span class="advantages__item-remark">лет</span>
+              </div>
+              <div class="advantages__item-desc">
+                <h4 class="advantages__item-title">Тренерский опыт</h4>
+                <p class="advantages__item-text">Добивайтесь своих целей быстрее с профессиональным тренером</p>
+              </div>
+            </li>
+          </ul>
       </section>
-      <section class="promo" id="promo">
-        <h2 class="promo__title">Акции</h2>
-        <ul class="promo__list">
-          <li class="promo__item primo-item-main">
-            <h4 class="promo__item-title">Год</h4>
-            <p class="promo__item-number">4900</p>
-            <p class="promo__item-text">Безлимитный абонемент в тренажерный зал</p>
-            <a class="promo__item-link" href="#">Подробнее</a>
+      <section class="sale" id="sale">
+        <h2 class="sale__title">Акции</h2>
+        <ul class="sale__list">
+          <li class="sale__item sale-item-main">
+            <h4 class="sale__item-title">Год</h4>
+            <p class="sale__item-number">4900</p>
+            <p class="sale__item-text">Безлимитный абонемент в тренажерный зал</p>
+            <a class="sale__item-link" href="#">Подробнее</a>
           </li>
-          <li class="promo__item">
-            <h4 class="promo__item-title">Месяц бесплатно</h4>
-            <p class="promo__item-text">Приведи друга, получи абонемент в подарок</p>
-            <a class="promo__item-link" href="#">Подробнее</a>
+          <li class="sale__item">
+            <h4 class="sale__item-title">Месяц бесплатно</h4>
+            <p class="sale__item-text">Приведи друга, получи абонемент в подарок</p>
+            <a class="sale__item-link" href="#">Подробнее</a>
           </li>
-          <li class="promo__item">
-            <h4 class="promo__item-title">Скидка 20%</h4>
-            <p class="promo__item-text">Корпоративный фитнес  с командой</p>
-            <a class="promo__item-link" href="#">Подробнее</a>
+          <li class="sale__item">
+            <h4 class="sale__item-title">Скидка 20%</h4>
+            <p class="sale__item-text">Корпоративный фитнес  с командой</p>
+            <a class="sale__item-link" href="#">Подробнее</a>
           </li>
         </ul>
       </section>
@@ -324,7 +418,7 @@
             <a class="main-nav__link" href="#membership">Абонементы</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#promo">Акции</a>
+            <a class="main-nav__link" href="#sale">Акции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#trainers">Тренеры</a>

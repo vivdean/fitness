@@ -9,4 +9,9 @@
   text-transform: uppercase;
   cursor: pointer;
   box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    @include font-info(10px, 700, 12px);
+    border: 2px solid $white;
+  }
 }

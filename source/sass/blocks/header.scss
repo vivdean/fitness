@@ -137,6 +137,7 @@
     padding: 24px 56px;
 
     @media (max-width: $tablet) {
+      border: 4px solid $white;
       padding: 24px 33px;
     }
 
