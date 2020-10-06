@@ -104,11 +104,11 @@
     @include reset-list;
     @include font-info(14px, 400, 21px);
     position: relative;
-    top: -90px;
+    top: -95px;
     right: 240px;
 
     @media (max-width: $tablet) {
-      top: -75px;
+      top: -90px;
       right: 170px;
     }
 

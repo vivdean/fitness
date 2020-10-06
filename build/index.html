@@ -337,37 +337,42 @@
               </div>
             </li>
           </ul>
-      </div></section>
+        </div>
+      </section>
       <section class="sale" id="sale">
         <h2 class="sale__title">Акции</h2>
-        <ul class="sale__list">
-          <li class="sale__item sale-item-main">
-            <h4 class="sale__item-title">Год</h4>
-            <p class="sale__item-number">4900</p>
-            <p class="sale__item-text">Безлимитный абонемент в тренажерный зал</p>
-            <a class="sale__item-link" href="#">Подробнее</a>
-          </li>
-          <li class="sale__item">
-            <h4 class="sale__item-title">Месяц бесплатно</h4>
-            <p class="sale__item-text">Приведи друга, получи абонемент в подарок</p>
-            <a class="sale__item-link" href="#">Подробнее</a>
-          </li>
-          <li class="sale__item">
-            <h4 class="sale__item-title">Скидка 20%</h4>
-            <p class="sale__item-text">Корпоративный фитнес  с командой</p>
-            <a class="sale__item-link" href="#">Подробнее</a>
-          </li>
-        </ul>
+        <div class="sale__block">
+          <div class="sale__promo">
+            <div class="sale__promo-description">
+              <h4>Год</h4>
+              <b>4900</b>
+              <p>Безлимитный абонемент в тренажерный зал</p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+          <ul class="sale__list">
+            <li class="sale__item">
+              <h4 class="sale__item-title">Месяц бесплатно</h4>
+              <p class="sale__item-text">Приведи друга, получи абонемент в подарок</p>
+              <a class="sale__item-link" href="#">Подробнее</a>
+            </li>
+            <li class="sale__item">
+              <h4 class="sale__item-title">Скидка 20%</h4>
+              <p class="sale__item-text">Корпоративный фитнес  с командой</p>
+              <a class="sale__item-link" href="#">Подробнее</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__slider reviews-slider">
-          <a class="reviews-slider__control reviews-slider__control-prev" href="#"></a>
+          <button class="reviews-slider__control reviews-slider__control-prev" type="button"></button>
           <ul class="reviews-slider__list">
-            <li class="reviews-slider__item">
+            <li class="reviews-slider__item visible">
               <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" alt="Фото автора отзыва" width="80" height="80">
-              <h4 class="reviews-slider__item-author">Анна Орлова</h4>
-              <p class="reviews-slider__item-text">«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+              <h4>Анна Орлова</h4>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
               </p>
             </li>
             <li class="reviews-slider__item">
@@ -377,33 +382,38 @@
               </p>
             </li>
           </ul>
+          <button class="reviews-slider__control reviews-slider__control-next" type="button"></button>
         </div>
       </section>
-      <div class="contacts-wrapper">
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
         <div class="workout">
-          <h2 class="workout__title">Бесплатное занятие </h2>
-          <form class="workout__form form-workout" action="https://echo.htmlacademy.ru" method="post">
-            <label for="user-name" class="form-workout__label visually-hidden">Имя</label>
-            <input class="form-workout__input" type="text" id="user-name" name="username" placeholder="Имя">
-            <label for="user-tel" class="form-workout__label visually-hidden">Телефон</label>
-            <input class="form-workout__input form-workout__input--tel" type="tel" id="user-tel" name="usertel" pattern="^\+7\d{3}\d{7}$" placeholder="Телефон">
-            <button type="submit" class="form-workout__button button">отправить</button>
+          <h2>Бесплатное занятие</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="workout__wrapper">
+              <label for="user-name" class="visually-hidden">Имя</label>
+              <input type="text" id="user-name" name="username" placeholder="Имя">
+              <label for="user-tel" class="visually-hidden">Телефон</label>
+              <input type="tel" id="user-tel" name="usertel" pattern="^\+7\d{3}\d{7}$" placeholder="Телефон">
+            </div>
+            <button type="submit" class="button">отправить</button>
           </form>
         </div>
         <div class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
+          <h2>Контакты</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
               <h4 class="contacts__item-title">Адрес:</h4>
               <p class="contacts__item-text">г. Омск, ул. 60 лет Октября, 7</p>
             </li>
             <li class="contacts__item">
-              <h4 class="contacts__item-title">График работы:</h4>
-              <p class="contacts__item-text">Пн-Вс: с 8:00 до 22:00</p>
-            </li>
-            <li class="contacts__item">
               <h4 class="contacts__item-title">Телефон:</h4>
               <a class="contacts__item-text" href="tel:+78005555555">8-800-555-55-55</a>
+            </li>
+            <li class="contacts__item">
+              <h4 class="contacts__item-title">График работы:</h4>
+              <p class="contacts__item-text">Пн-Вс: с 8:00 до 22:00</p>
             </li>
             <li class="contacts__item">
               <h4 class="contacts__item-title">Email:</h4>
@@ -412,53 +422,57 @@
           </ul>
         </div>
       </div>
-    </main>
-    <footer>
-      <nav class="main-nav">
-        <a class="main-nav__logo">
-          <img src="img/logo.svg" alt="Логотип">
-        </a>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link " href="#gym">Услуги</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#membership">Абонементы</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#sale">Акции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#trainers">Тренеры</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Расписание</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Вконтакте">
-            <svg class="social-list__icon" width="24px" height="13px">
-              <use xlink:href="#icon-vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Инстаграме">
-            <svg class="social-list__icon" width="24px" height="24px">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Фейсбуке">
-            <svg class="social-list__icon" width="12px" height="24px">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="main-nav">
+        <div class="main-nav__wrapper">
+          <nav>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--logo">
+                <a class="main-nav__logo">
+                  <img src="img/logo.svg" alt="Логотип">
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#gym">Услуги</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#membership">Абонементы</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#sale">Акции</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#trainers">Тренеры</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Расписание</a>
+              </li>
+            </ul>
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="#" aria-label="Мы в Вконтакте">
+                  <svg class="social-list__icon" width="24px" height="13px">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="#" aria-label="Мы в Инстаграме">
+                  <svg class="social-list__icon" width="24px" height="24px">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="#" aria-label="Мы в Фейсбуке">
+                  <svg class="social-list__icon" width="12px" height="24px">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>

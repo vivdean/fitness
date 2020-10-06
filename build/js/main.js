@@ -70,3 +70,27 @@ var moveSliderPrev = function (width, count) {
   position = Math.min(position, 0);
   list.style.marginLeft = position + 'px';
 };
+
+var reviewsSlider = document.querySelector('.reviews__slider');
+var slidePrev = document.querySelector('.reviews-slider__control-prev');
+var slideNext = document.querySelector('.reviews-slider__control-next');
+var slideImg = reviewsSlider.querySelectorAll('.reviews-slider__item');
+var slideIndex = 0;
+
+slideNext.addEventListener('click', function () {
+  slidePrev.style.display = 'block';
+  slideImg[slideIndex].classList.remove('visible');
+  slideImg[++slideIndex].classList.add('visible');
+  if (slideIndex === slideImg.length - 1) {
+    slideNext.style.display = 'none';
+  }
+});
+
+slidePrev.addEventListener('click', function () {
+  slideNext.style.display = 'block';
+  slideImg[slideIndex].classList.remove('visible');
+  slideImg[--slideIndex].classList.add('visible');
+  if (slideIndex === 0) {
+    slidePrev.style.display = 'none';
+  }
+});

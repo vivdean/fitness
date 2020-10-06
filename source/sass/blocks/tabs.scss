@@ -7,6 +7,7 @@
   overflow: hidden;
 
   @media (max-width: $mobile) {
+    margin-top: 100px;
     background: linear-gradient(180deg, $light-grey 93%, $white 93%);
   }
 

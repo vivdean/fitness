@@ -1,0 +1,150 @@
+.sale {
+  @include container;
+
+  h2 {
+    text-align: center;
+  }
+
+  a {
+    @include font-info(14px, 400, 16px);
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+}
+
+.sale__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.sale__promo {
+  width: 560px;
+  min-height: 462px;
+  background-color: $red;
+  background-image: url("../img/sale-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    background-image: url("../img/sale-tablet@1x.png");
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    min-height: 598px;
+    background-image: url("../img/sale-mobile@1x.png");
+    background-position: bottom center;
+  }
+}
+
+.sale__promo-description {
+  width: 280px;
+  height: 100%;
+  padding: 45px;
+  box-sizing: border-box;
+  text-align: left;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet) {
+    width: 42%;
+    min-height: 462px;
+    padding: 6.5%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    text-align: center;
+  }
+
+  h4 {
+    @include font-info(28px, 700, 44px);
+    margin: 0;
+  }
+
+  b {
+    @include font-info(70px, 700, 109px);
+    margin: 0;
+  }
+
+  p {
+    @include font-info(18px, 400, 25px);
+    margin-top: 0;
+  }
+
+  a {
+    color: $white;
+
+    @media (max-width: $mobile) {
+      margin-top: 0;
+    }
+  }
+}
+
+
+.sale__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  margin: 0;
+  color: $blue;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  li {
+    border: 7px solid $blue-linear;
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    min-height: 211px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet) {
+      width: calc(50% - 15px);
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  h4 {
+    @include font-info(26px, 700, 44px);
+    margin: 0;
+  }
+
+  p {
+    @include font-info(16px, 400, 22px);
+    margin: 0;
+  }
+
+  a {
+    color: $blue;
+  }
+}
