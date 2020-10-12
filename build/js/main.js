@@ -2,20 +2,24 @@
 
 var jsTriggers = document.querySelectorAll('.tabs__trigger');
 
-jsTriggers.forEach(function (trigger) {
-  trigger.addEventListener('click', function () {
-    var id = trigger.getAttribute('data-tab');
+var activateTabsContent = function (i) {
+  return function () {
+    var id = jsTriggers[i].getAttribute('data-tab');
     var content = document.querySelector('.membership[data-tab="' + id + '"]');
     var activeTrigger = document.querySelector('.tabs__trigger.active');
     var activeContent = document.querySelector('.membership.active');
 
     activeTrigger.classList.remove('active');
-    trigger.classList.add('active');
+    jsTriggers[i].classList.add('active');
 
     activeContent.classList.remove('active');
     content.classList.add('active');
-  });
-});
+  };
+};
+
+for (var i = 0; i < jsTriggers.length; i++) {
+  jsTriggers[i].addEventListener('click', activateTabsContent(i));
+}
 
 var carousel = document.querySelector('.trainers-slider');
 var list = carousel.querySelector('.trainers-slider__list');
@@ -30,11 +34,11 @@ var slideParameters = {
     count: 4,
   },
   'tablet': {
-    width: 308,
+    width: 298,
     count: 2,
   },
   'mobile': {
-    width: 268,
+    width: 256,
     count: 1,
   }
 };

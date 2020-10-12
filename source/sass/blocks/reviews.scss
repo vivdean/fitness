@@ -1,9 +1,22 @@
 .reviews {
   @include container;
-  margin-bottom: 100px;
+  margin-bottom: 123px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 70px;
+  }
 
   h2 {
     text-align: center;
+    margin-bottom: 50px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -20,7 +33,7 @@
     padding: 0 8%;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $mobile) {
     padding: 0 11%;
   }
 
@@ -31,14 +44,19 @@
 
   .reviews-slider__item {
     display: none;
-    padding: 62px;
-    padding-left: 130px;
+    padding: 56px 62px 40px 170px;
     position: relative;
     background-color: $blue;
     box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
+    @media (max-width: $tablet) {
+      padding-right: 11.8%;
+      padding-left: 30.5%;
+    }
+
     @media (max-width: $mobile) {
-      padding: 40px 12%;
+      padding: 30px 12%;
+      padding-bottom: 0;
       min-height: 304px;
     }
   }
@@ -50,13 +68,20 @@
   img {
     object-fit: contain;
     position: absolute;
-    top: 40%;
-    left: 30px;
+    left: 60px;
+    top: 42%;
     transform: translateY(-50%);
 
+    @media (max-width: $tablet) {
+      top: 43%;
+      left: 12%;
+    }
+
     @media (max-width: $mobile) {
-      top: 23%;
-      left: 15%;
+      top: 75px;
+      left: 17%;
+      width: 68px;
+      height: 69px;
     }
   }
 
@@ -67,14 +92,15 @@
     @media (max-width: $mobile) {
       @include font-info(20px, 700, 26px);
       max-width: 65px;
-      margin-left: auto;
-      margin-bottom: 40px;
+      margin-left: 55%;
+      margin-bottom: 20px;
       margin-top: 20px;
     }
   }
 
   p {
     @include font-info(16px, 400, 22px);
+    margin-top: 12px;
 
     @media (max-width: $mobile) {
       text-align: center;
@@ -91,15 +117,16 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 
   &-prev {
     background-image: url("../img/arrow-right.svg");
-    left: -3%;
+    left: -6%;
   }
 
   &-next {
     background-image: url("../img/arrow-left.svg");
-    right: -3%;
+    right: -6%;
   }
 
   @media (max-width: $tablet) {
@@ -109,6 +136,18 @@
 
     &-next {
       right: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background-color: transparent;
+
+    &-prev {
+      background-image: url("../img/arrow-right-mobile.svg");
+    }
+
+    &-next {
+      background-image: url("../img/arrow-left-mobile.svg");
     }
   }
 }

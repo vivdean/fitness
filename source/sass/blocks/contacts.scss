@@ -1,9 +1,7 @@
 .contacts {
   background-color: $white;
   width: 50%;
-  padding: 50px;
-  padding-left: 140px;
-  padding-right: 0;
+  padding: 70px 0 50px 120px;
   box-sizing: border-box;
 
   ul {
@@ -12,45 +10,104 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      width: 1px;
+      height: 129px;
+      top: 50%;
+      left: 42%;
+      transform: translate(-50%, -50%);
+      background: $grey-border;
+    }
 
     @media (max-width: $mobile) {
       flex-direction: column;
+
+      &::after {
+        content: none;
+      }
     }
   }
 
-  li {
+  .contacts__item {
     min-width: 170px;
+
+    &--fourth {
+      margin-left: auto;
+    }
+
+    @media (max-width: $tablet) {
+      width: 50%;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      width: 100%;
+
+      &--first {
+        order: 1;
+      }
+
+      &--second {
+        order: 3;
+      }
+
+      &--third {
+        order: 2;
+      }
+
+      &--fourth {
+        order: 4;
+      }
+    }
   }
 
   h4 {
-    margin-bottom: 15px;
+    margin-bottom: 7px;
+
+    @media (max-width: $tablet) {
+      @include font-info(20px, 700, 30px);
+      margin-top: 0;
+    }
   }
 
   p {
     @include font-info(14px, 400, 21px);
     margin: 0;
+
+    @media (max-width: $tablet) {
+      @include font-info(18px, 400, 27px);
+    }
   }
 
   a {
     color: $blue-text;
+
+    @media (max-width: $tablet) {
+      @include font-info(18px, 400, 27px);
+    }
   }
 
   h2 {
     @media (max-width: $tablet) {
       padding: 0;
+      margin-bottom: 35px;
     }
   }
 
   @media (max-width: $tablet) {
     width: auto;
     padding: 0 17%;
-    padding-bottom: 70px;
-    padding-right: 21%;
+    padding-bottom: 43px;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile) {
     @include container;
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 44px;
   }
 }

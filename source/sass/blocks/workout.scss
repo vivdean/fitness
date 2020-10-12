@@ -2,9 +2,7 @@
   background-color: $blue-text;
   color: $white;
   width: 50%;
-  padding: 50px;
-  padding-right: 140px;
-  padding-left: 0;
+  padding: 70px 170px 72px 0;
   box-sizing: border-box;
 
   @media (max-width: $tablet) {
@@ -14,12 +12,13 @@
 
   form {
     width: 100%;
-    margin-top: 35px;
+    margin-top: 32px;
 
     @media (max-width: $tablet) {
       width: auto;
+      margin-top: 30px;
+      margin-bottom: 67px;
       padding: 0 17%;
-      padding-bottom: 70px;
       padding-right: 21%;
     }
 
@@ -39,16 +38,23 @@
   }
 
   input {
+    @include font-info(14px, 400, 16px);
     width: 190px;
+    box-sizing: border-box;
     background-color: $blue-text;
     border: none;
     border-bottom: 1px solid $grey-border;
     outline: none;
     color: $white;
-    padding: 10px 0;
+    padding: 8px 2px;
 
     @media (max-width: $tablet) {
+      width: calc(50% - 30px);
+    }
+
+    @media (max-width: $mobile) {
       width: 100%;
+      padding: 37px 2px 5px;
     }
   }
 
@@ -61,8 +67,12 @@
     @include font-info(14px, 700, 16px);
     color: $white;
     width: 100%;
-    padding: 21px 30px;
+    padding: 16px 30px;
     border: 3px solid $white;
-    margin-top: 35px;
+    margin-top: 26px;
+
+    @media (max-width: $mobile) {
+      margin-top: 40px;
+    }
   }
 }

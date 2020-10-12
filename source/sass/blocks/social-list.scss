@@ -26,3 +26,10 @@
     }
   }
 }
+
+.social-list__icon {
+  @media (max-width: $mobile) {
+    width: 27px;
+    height: 27px;
+  }
+}

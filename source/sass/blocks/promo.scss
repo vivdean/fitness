@@ -2,50 +2,71 @@
   @include container;
   background-image: url("../img/promo-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center right;
+  background-size: 660px 500px;
   background-color: $red;
   color: $white;
   min-height: 500px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/promo-desktop@2x.png");
+  }
 
   @media (max-width: $tablet) {
     padding: 0;
     margin: 0 6%;
     background-image: url("../img/promo-tablet@1x.png");
+    background-size: 386px 292px;
     min-height: 292px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-tablet@2x.png");
+    }
   }
 
   @media (max-width: $mobile) {
+    background-image: url("../img/promo-mobile@1x.png");
     background-position: bottom center;
+    background-size: 290px 299px;
     min-height: 584px;
     margin: 0 5%;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-mobile@2x.png");
+    }
   }
 }
 
 .promo__wrapper {
   width: 30%;
-  padding: 87px 78px;
+  padding: 83px 76px;
 
   a {
-    padding: 30px;
+    padding: 27px;
     width: 100%;
-    margin-top: 18px;
+    margin-top: 10px;
 
     @media (max-width: $tablet) {
-      padding: 16px;
+      padding: 13px;
     }
   }
 
   p {
-    margin-top: 10px;
+    @include font-info(18px, 400, 27px);
+    margin-top: 8px;
+    margin-bottom: 33px;
 
     @media (max-width: $tablet) {
       @include font-info(12px, 400, 18px);
       margin: 0;
+      margin-bottom: 20px;
     }
   }
 
   @media (max-width: $tablet) {
-    padding: 46px 7%;
+    padding-left: 6.5%;
+    padding-top: 50px;
+    padding-bottom: 0;
   }
 
   @media (max-width: $mobile) {
@@ -63,6 +84,7 @@
 
   h2 {
     @include font-info(90px, 700, 90px);
+    letter-spacing: 0.03em;
     max-width: 201px;
     margin: 0;
 
@@ -79,14 +101,7 @@
 
     @media (max-width: $tablet) {
       @include font-info(12px, 400, 18px);
-    }
-  }
-
-  b {
-    @include font-info(40px, 700, 60px);
-
-    @media (max-width: $tablet) {
-      @include font-info(24px, 700, 36px);
+      padding-bottom: 0;
     }
   }
 
@@ -94,24 +109,36 @@
     @include font-info(14px, 400, 21px);
 
     @media (max-width: $tablet) {
-      @include font-info(10px, 400, 15px);
+      @include font-info(10px, 400, 13px);
+    }
+  }
+
+  b {
+    @include font-info(40px, 700, 40px);
+
+    @media (max-width: $tablet) {
+      @include font-info(24px, 700, 25px);
     }
   }
 }
 
-.promo__date-wrap,
-.promo__month-year {
+.promo__date-wrap {
   display: flex;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 7px;
+  }
 }
 
 .promo__month-year {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-bottom: 21px;
+  margin-left: 3px;
 
   @media (max-width: $tablet) {
     margin-left: 5px;
-    margin-top: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

@@ -1,14 +1,32 @@
 .tabs {
-  margin-top: 200px;
-  background: url("../img/plates@1x.png"), linear-gradient(180deg, $light-grey 93%, $white 93%);
+  margin-top: 230px;
+  margin-bottom: 45px;
+  background: url("../img/plates-desktop@1x.png"), linear-gradient(180deg, $light-grey 93%, $white 93%);
   background-repeat: no-repeat;
-  background-position: bottom right, center;
-  background-size: 221px 374px, auto;
+  background-position: right 510px, center;
+  background-size: 295px 494px, auto;
   overflow: hidden;
 
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/plates-desktop@2x.png"), linear-gradient(180deg, $light-grey 93%, $white 93%);
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 65px;
+    background: url("../img/plates-tablet@1x.png"), linear-gradient(180deg, $light-grey 97%, $white 97%);
+    background-repeat: no-repeat;
+    background-size: 350px 445px, auto;
+    background-position: right 1455px, center;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/plates-tablet@2x.png"), linear-gradient(180deg, $light-grey 97%, $white 97%);
+    }
+  }
+
   @media (max-width: $mobile) {
-    margin-top: 100px;
-    background: linear-gradient(180deg, $light-grey 93%, $white 93%);
+    margin-top: 70px;
+    margin-bottom: 80px;
+    background: $light-grey;
   }
 
   ul {
@@ -16,7 +34,19 @@
   }
 
   h2 {
-    padding-top: 50px;
+    padding-top: 80px;
+    margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      margin-top: 19px;
+      margin-bottom: 13px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 0;
+      margin-bottom: 7px;
+      padding-top: 70px;
+    }
   }
 }
 
@@ -26,39 +56,55 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 150px;
+  padding-bottom: 180px;
 
   @media (max-width: $tablet) {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 10px;
   }
 }
 
 .tabs__header {
-  width: auto;
   display: flex;
   border-bottom: 2px solid $grey-border;
-  margin-bottom: 50px;
-  margin-right: -40px;
+  margin-bottom: 20px;
+  margin-right: -45px;
   overflow: hidden;
+
+  @media (max-width: $tablet) {
+    margin-right: -54px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 18px;
+    margin-right: -45px;
+  }
 
   li {
     @include font-info (20px, 400, 30px);
     color: $darkgrey;
-    margin-right: 40px;
-    padding-bottom: 20px;
+    margin-right: 45px;
+    padding-bottom: 10px;
     cursor: pointer;
 
     &.active {
       color: $blue-text;
       border-bottom: 2px solid $red;
+      outline: none;
     }
 
     @media (max-width: $tablet) {
-      @include font-info (20px, 400, 30px);
+      @include font-info (18px, 400, 27px);
+      margin-right: 54px;
     }
 
     @media (max-width: $mobile) {
       @include font-info (16px, 400, 24px);
+      margin-right: 45px;
     }
   }
 }

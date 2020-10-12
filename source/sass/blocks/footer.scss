@@ -1,7 +1,5 @@
 footer {
-  //position: sticky;
-  //bottom: 0;
-  //left: 0;
+  margin-top: auto;
   width: 100%;
   border-top: 1px solid $grey-border;
   background: linear-gradient(to right, $blue-text 50%, $white 50%);
@@ -16,8 +14,13 @@ footer {
 
     @media (max-width: $tablet) {
       text-align: left;
-      margin-top: 70px;
+      margin-top: 68px;
       padding-left: 17%;
+    }
+
+    @media (max-width: $mobile) {
+      padding-left: 5%;
+      margin-bottom: 5px;
     }
   }
 }
