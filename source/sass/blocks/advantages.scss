@@ -1,24 +1,26 @@
 .advantages {
   background-color: $light-grey;
   margin: 100px 0;
+  margin-top: 122px;
 
 
   @media (max-width: $tablet) {
-    margin-top: 85px;
+    margin: 100px 0;
   }
 
   @media (max-width: $mobile) {
-    margin-top: 50px;
-    margin-bottom: 74px;
+    margin-top: 70px;
+    margin-bottom: 71px;
   }
 }
 
 .advantages__wrapper {
   @include container;
-  padding: 10px 0;
-  padding-top: 85px;
+  padding: 25px 0;
+  padding-top: 77px;
 
   h2 {
+    @include h2-font-info;
     text-align: center;
     margin-bottom: 0;
 
@@ -53,7 +55,7 @@
 
   @media (max-width: $mobile) {
     padding: 0;
-    padding-top: 46px;
+    padding-top: 43px;
   }
 }
 
@@ -67,7 +69,7 @@
   &--first,
   &--second {
     border-bottom: 2px solid $red-border;
-    padding: 63px 10px 63px 140px;
+    padding: 61px 10px 63px 140px;
 
     @media (max-width: $tablet) {
       border-bottom: none;
@@ -106,6 +108,8 @@
   }
 
   &--fourth {
+    padding-left: 130px;
+
     &::before {
       background-image: url("../img/350-desktop.svg");
     }
@@ -120,10 +124,14 @@
 
   p {
     @include font-info (16px, 300, 22px);
-    margin-top: 5px;
+    margin-top: 6px;
 
     @media (max-width: $tablet) {
       margin-top: 0;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 2px;
     }
   }
 
@@ -199,7 +207,7 @@
     padding-top: 82px;
 
     &::before {
-      top: 18px;
+      top: 16px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -211,7 +219,7 @@
     }
 
     &--second {
-      padding-bottom: 30px;
+      padding-bottom: 28px;
 
       &::before {
         background-image: url("../img/70-mobile.svg");
@@ -228,7 +236,7 @@
     }
 
     &--fifth {
-      padding-bottom: 45px;
+      padding-bottom: 47px;
 
       &::before {
         background-image: url("../img/5+-mobile.svg");
@@ -248,7 +256,12 @@
     left: 50%;
     flex-direction: column;
     align-items: center;
-    padding: 55px 33px;
+    padding: 55px 36px;
+    padding-bottom: 60px;
+
+    h2 {
+      @include font-info(74px, 700, 76px);
+    }
 
     b {
       @include font-info(71px, 700, 76px);
@@ -263,7 +276,7 @@
       margin-bottom: 0;
 
       @media (max-width: $tablet) {
-        margin-top: 12px;
+        margin-top: 11px;
       }
     }
 
@@ -280,13 +293,12 @@
       position: static;
       transform: none;
       width: 65%;
-      padding: 5% 20%;
-      padding-bottom: 40px;
+      padding: 33px 20% 40px;
     }
 
     @media (max-width: $mobile) {
       width: 100%;
-      padding: 40px 21% 40px;
+      padding: 40px 21% 44px;
 
       b {
         @include font-info(71px, 700, 66px);
@@ -298,7 +310,7 @@
 .advantages__item-desc {
   @media (max-width: $mobile) {
     margin: 0;
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 0 14.5%;
     text-align: center;
   }

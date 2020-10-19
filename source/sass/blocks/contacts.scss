@@ -1,7 +1,7 @@
 .contacts {
   background-color: $white;
   width: 50%;
-  padding: 70px 0 50px 120px;
+  padding: 66px 0 26px 120px;
   box-sizing: border-box;
 
   ul {
@@ -9,17 +9,28 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 24px 0 24px 5px;
     position: relative;
 
     &::after {
       @include pseudo;
       width: 1px;
-      height: 129px;
+      height: 102px;
       top: 50%;
-      left: 42%;
+      left: 50%;
       transform: translate(-50%, -50%);
       background: $grey-border;
+    }
+
+    @media (max-width: $tablet) {
+      margin-left: 0;
+
+      &::after {
+        @include pseudo;
+        height: 129px;
+        top: 50%;
+        left: 42%;
+      }
     }
 
     @media (max-width: $mobile) {
@@ -32,20 +43,32 @@
   }
 
   .contacts__item {
-    min-width: 170px;
+    width: 170px;
 
     &--fourth {
       margin-left: auto;
     }
 
     @media (max-width: $tablet) {
-      width: 50%;
       margin-bottom: 18px;
+      padding-right: 90px;
+      box-sizing: border-box;
+
+      &--first,
+      &--third {
+        width: 49.5%;
+      }
+
+      &--second,
+      &--fourth {
+        width: 50.5%;
+      }
     }
 
     @media (max-width: $mobile) {
       flex-direction: column;
       width: 100%;
+      padding-right: 0;
 
       &--first {
         order: 1;
@@ -67,6 +90,7 @@
 
   h4 {
     margin-bottom: 7px;
+    margin-top: 20px;
 
     @media (max-width: $tablet) {
       @include font-info(20px, 700, 30px);
@@ -84,6 +108,7 @@
   }
 
   a {
+    @include font-info(14px, 400, 21px);
     color: $blue-text;
 
     @media (max-width: $tablet) {
@@ -92,22 +117,29 @@
   }
 
   h2 {
+    @include h2-font-info;
+
     @media (max-width: $tablet) {
+      margin-bottom: 33px;
+      margin-top: 68px;
       padding: 0;
+    }
+
+    @media (max-width: $mobile) {
       margin-bottom: 35px;
     }
   }
 
   @media (max-width: $tablet) {
     width: auto;
-    padding: 0 17%;
-    padding-bottom: 43px;
+    padding: 0 17.3%;
+    padding-bottom: 20px;
     padding-right: 0;
   }
 
   @media (max-width: $mobile) {
     @include container;
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 20px;
   }
 }

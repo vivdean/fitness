@@ -1,13 +1,18 @@
 .sale {
   @include container;
-  margin-top: 135px;
+  margin-top: 118px;
   margin-bottom: 120px;
 
   h2 {
+    @include h2-font-info;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 
     @media (max-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $mobile) {
       margin-bottom: 42px;
     }
   }
@@ -21,7 +26,7 @@
   }
 
   @media (max-width: $tablet) {
-    margin-top: 100px;
+    margin-top: 97px;
     margin-bottom: 70px;
   }
 
@@ -43,37 +48,43 @@
 
 .sale__promo {
   width: 560px;
-  min-height: 462px;
   background-color: $red;
-  background-image: url("../img/sale-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 279px 462px;
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/sale-desktop@2x.png");
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (max-width: $tablet) {
     width: 100%;
-    background-image: url("../img/sale-tablet@1x.png");
-    background-size: 399px 462px;
     margin-bottom: 30px;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/sale-tablet@2x.png");
-    }
   }
 
   @media (max-width: $mobile) {
     width: 100%;
-    min-height: 598px;
-    background-image: url("../img/sale-mobile@1x.png");
-    background-position: bottom center;
-    background-size: 290px 299px;
+  }
+}
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/sale-mobile@2x.png");
+.sale__image-container {
+  @media (max-width: $tablet) {
+    width: 59%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      height: 462px;
+      object-position: top;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: 299px;
     }
   }
 }
@@ -90,13 +101,14 @@
   flex-direction: column;
 
   @media (max-width: $tablet) {
-    width: 42%;
+    width: 41%;
     min-height: 462px;
     padding: 35px 6.5% 45px;
   }
 
   @media (max-width: $mobile) {
     width: 100%;
+    min-height: 299px;
     text-align: center;
     padding: 35px 15% 45px;
   }
@@ -123,29 +135,31 @@
 
   a {
     color: $white;
+    width: fit-content;
 
     @media (max-width: $mobile) {
-      margin-top: 0;
+      margin: 0 auto;
     }
   }
 }
-
 
 .sale__list {
   @include reset-list;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 560px;
   margin: 0;
   color: $blue;
   flex-wrap: wrap;
   box-sizing: border-box;
+  margin-bottom: -40px;
+  overflow: hidden;
 
   @media (max-width: $tablet) {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 
   @media (max-width: $mobile) {
@@ -157,17 +171,17 @@
   border: 7px solid $blue-linear;
   border-image-source: linear-gradient(148.82deg, $red-gradient 0.85%, $blue-gradient 100%);
   border-image-slice: 1;
-  padding: 17px 25px 28px 27px;
+  padding: 16px 25px 28px 27px;
   box-sizing: border-box;
   min-height: 211px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 
   @media (max-width: $tablet) {
     width: calc(50% - 15px);
     margin-bottom: 30px;
-    padding-left: 4%;
-    padding-right: 6%;
+    padding: 15px 6% 28px 4%;
 
     &--first {
       padding-right: 7%;
@@ -177,22 +191,28 @@
   @media (max-width: $mobile) {
     width: 100%;
     text-align: center;
-    padding: 27px 14% 40px;
+    padding: 26px 14% 40px;
   }
 
   h4 {
-    @include font-info(26px, 700, 44px);
+    @include font-info(26px, 700, 46px);
     margin: 0;
   }
 
   p {
     @include font-info(16px, 400, 22px);
     margin: 0;
+    margin-bottom: 26px;
   }
 
   a {
     @include font-info(12px, 400, 14px);
     letter-spacing: 0.05em;
     color: $blue;
+    width: fit-content;
+
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+    }
   }
 }

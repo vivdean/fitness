@@ -1,16 +1,17 @@
 .reviews {
   @include container;
-  margin-bottom: 123px;
+  margin-bottom: 122px;
 
   @media (max-width: $tablet) {
-    margin-bottom: 100px;
+    margin-bottom: 98px;
   }
 
   @media (max-width: $mobile) {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
 
   h2 {
+    @include h2-font-info;
     text-align: center;
     margin-bottom: 50px;
 
@@ -21,48 +22,48 @@
 }
 
 .reviews__slider {
-  width: 600px;
+  width: 560px;
   color: $white;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 55px;
   position: relative;
-  box-sizing: border-box;
 
   @media (max-width: $tablet) {
-    width: 100%;
-    padding: 0 8%;
+    width: 566px;
   }
 
   @media (max-width: $mobile) {
-    padding: 0 11%;
+    width: auto;
+    padding: 0 31px;
   }
 
   ul {
     @include reset-list;
-    transition: margin-left 500ms;
+    display: flex;
+    height: 100%;
   }
 
   .reviews-slider__item {
     display: none;
-    padding: 56px 62px 40px 170px;
-    position: relative;
-    background-color: $blue;
-    box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-
-    @media (max-width: $tablet) {
-      padding-right: 11.8%;
-      padding-left: 30.5%;
-    }
-
-    @media (max-width: $mobile) {
-      padding: 30px 12%;
-      padding-bottom: 0;
-      min-height: 304px;
-    }
   }
 
   .reviews-slider__item.visible {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 56px 62px 40px 170px;
+    background-color: $blue;
+    box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+    position: relative;
+    min-height: 242px;
+    box-sizing: border-box;
+
+    @media (max-width: $tablet) {
+      padding: 53px 63px 43px 172px;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 21px 12%;
+    }
   }
 
   img {
@@ -78,8 +79,10 @@
     }
 
     @media (max-width: $mobile) {
-      top: 75px;
-      left: 17%;
+      position: static;
+      transform: none;
+      padding-top: 18px;
+      padding-left: 12px;
       width: 68px;
       height: 69px;
     }
@@ -92,9 +95,9 @@
     @media (max-width: $mobile) {
       @include font-info(20px, 700, 26px);
       max-width: 65px;
-      margin-left: 55%;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-left: 17px;
+      margin-bottom: 10px;
+      margin-top: 27px;
     }
   }
 
@@ -104,6 +107,7 @@
 
     @media (max-width: $mobile) {
       text-align: center;
+      width: 100%;
     }
   }
 }
@@ -119,35 +123,27 @@
   transform: translateY(-50%);
   cursor: pointer;
 
-  &-prev {
+  &--prev {
     background-image: url("../img/arrow-right.svg");
-    left: -6%;
+    left: 0;
   }
 
-  &-next {
+  &--next {
     background-image: url("../img/arrow-left.svg");
-    right: -6%;
-  }
-
-  @media (max-width: $tablet) {
-    &-prev {
-      left: 0;
-    }
-
-    &-next {
-      right: 0;
-    }
+    right: 0;
   }
 
   @media (max-width: $mobile) {
     background-color: transparent;
+    top: 52%;
 
-    &-prev {
+    &--prev {
       background-image: url("../img/arrow-right-mobile.svg");
     }
 
-    &-next {
+    &--next {
       background-image: url("../img/arrow-left-mobile.svg");
+      right: -7px;
     }
   }
 }

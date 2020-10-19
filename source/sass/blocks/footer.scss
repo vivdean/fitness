@@ -9,12 +9,13 @@ footer {
   }
 
   h2 {
+    @include h2-font-info;
     margin: 0;
     margin-bottom: 20px;
 
     @media (max-width: $tablet) {
       text-align: left;
-      margin-top: 68px;
+      margin-top: 70px;
       padding-left: 17%;
     }
 

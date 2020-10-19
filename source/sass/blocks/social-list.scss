@@ -1,7 +1,10 @@
 .social-list {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin-top: 10px;
+  max-width: 150px;
 
   @media (max-width: $tablet) {
     margin-right: -20px;
@@ -10,11 +13,14 @@
 
   @media (max-width: $mobile) {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
+    margin-right: 0;
+    max-width: 250px;
   }
 
   li {
     margin-left: 25px;
+    margin-bottom: 7px;
 
     @media (max-width: $tablet) {
       margin-right: 20px;
@@ -29,7 +35,19 @@
 
 .social-list__icon {
   @media (max-width: $mobile) {
-    width: 27px;
-    height: 27px;
+    &--vk {
+      width: 32px;
+      height: 17px;
+    }
+
+    &--ig {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 27px;
+    }
   }
 }

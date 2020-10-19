@@ -49,3 +49,9 @@
 @mixin transition {
   transition: all 0.3s ease-in-out;
 }
+
+@mixin h2-font-info {
+  @include font-title;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  letter-spacing: 0.03em;
+}

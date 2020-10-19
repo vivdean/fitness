@@ -1,144 +1,53 @@
 .trainers {
-  margin-top: 115px;
-  overflow: hidden;
+  margin-top: 117px;
 
   h2 {
     @include container;
-    margin-bottom: 35px;
+    @include h2-font-info;
+    margin-bottom: 50px;
 
     @media (max-width: $tablet) {
       margin: 20px 0;
+      margin-bottom: 40px;
       text-align: center;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 43px;
     }
   }
 
   @media (max-width: $tablet) {
     @include container;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   @media (max-width: $mobile) {
-    margin-top: 46px;
+    margin-top: 68px;
   }
 }
 
 .trainers-slider {
-  @include container;
-  display: flex;
+  margin: 0 auto;
   position: relative;
+  min-width: 1200px;
+  max-width: 1270px;
 
-  ul {
-    @include reset-list;
-    display: flex;
-    margin-right: -40px;
-    overflow: hidden;
-    transition: margin-left 500ms;
-
-    @media (max-width: $tablet) {
-      margin-right: -30px;
-      margin-top: 20px;
-    }
-
-    @media (max-width: $mobile) {
-      margin-top: 23px;
-    }
+  @media (max-width: $tablet) {
+    min-width: 676px;
+    width: 676px;
   }
 
-  .trainers-slider__control {
-    background-color: $white;
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 34px;
-    border: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-
-    &-prev {
-      background-image: url("../img/arrow-right.svg");
-      left: -5%;
-    }
-
-    &-next {
-      background-image: url("../img/arrow-left.svg");
-      right: -5%;
-    }
-
-    @media (max-width: $tablet) {
-      &-prev {
-        left: 0;
-      }
-
-      &-next {
-        right: 0;
-      }
-    }
-
-    @media (max-width: $mobile) {
-      width: 10px;
-      height: 20px;
-
-      &-prev {
-        background-image: url("../img/arrow-right-mobile.svg");
-      }
-
-      &-next {
-        background-image: url("../img/arrow-left-mobile.svg");
-      }
-    }
-  }
-
-  .trainers-slider__item {
-    margin-right: 40px;
-    position: relative;
-    min-width: 260px;
-    display: inline-block;
-
-    img {
-      object-fit: cover;
-      min-height: 294px;
-
-      @media (max-width: $mobile) {
-        min-height: 274px;
-      }
-    }
-
-    p {
-      @include font-info(18px, 700, 27px);
-      color: $white;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: auto;
-      text-align: center;
-    }
-
-    &:hover,
-    &:focus {
-      .trainers-slider__info {
-        opacity: 1;
-      }
-
-      p {
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: $tablet) {
-      min-width: 268px;
-      margin-right: 30px;
-    }
-
-    @media (max-width: $mobile) {
-      min-width: 226px;
-    }
+  @media (max-width: $mobile) {
+    min-width: 290px;
+    width: 290px;
   }
 }
 
+
 .trainers-slider__container {
   width: 1160px;
+  height: 100%;
   overflow: hidden;
   margin: 0 auto;
 
@@ -148,6 +57,94 @@
 
   @media (max-width: $mobile) {
     width: 226px;
+  }
+}
+
+.trainers-slider__wrapper {
+  display: flex;
+}
+
+.trainers-slider__control {
+  background-color: $white;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 34px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../img/arrow-right.svg");
+    left: 0;
+  }
+
+  &--next {
+    background-image: url("../img/arrow-left.svg");
+    right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    width: 10px;
+    height: 20px;
+
+    &--prev {
+      background-image: url("../img/arrow-right-mobile.svg");
+    }
+
+    &--next {
+      background-image: url("../img/arrow-left-mobile.svg");
+    }
+  }
+}
+
+.trainers-slider__item {
+  margin-right: 40px;
+  position: relative;
+  min-width: 260px;
+  display: inline-block;
+  vertical-align: middle;
+
+  img {
+    object-fit: cover;
+    min-height: 294px;
+
+    @media (max-width: $mobile) {
+      min-height: 274px;
+    }
+  }
+
+  p {
+    @include font-info(18px, 700, 27px);
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    .trainers-slider__info {
+      opacity: 1;
+    }
+
+    p {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    min-width: 268px;
+    margin-right: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    min-width: 226px;
+    margin-right: 0;
   }
 }
 

@@ -31,6 +31,7 @@
     min-height: 448px;
     background-color: $white;
     margin-right: 40px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +61,8 @@
 
     @media (max-width: $mobile) {
       width: 100%;
+      max-width: 442px;
+      margin: 0 auto;
       padding-bottom: 44px;
       min-height: 384px;
       margin-bottom: 35px;
@@ -82,14 +85,14 @@
     @include font-info(60px, 700, 90px);
     color: $blue-number;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     position: relative;
     z-index: 1;
 
     @media (max-width: $mobile) {
       @include font-info(48px, 700, 72px);
       margin-top: 38px;
-      margin-bottom: 28px;
+      margin-bottom: 29px;
     }
   }
 
@@ -123,5 +126,10 @@
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: $tablet) {
+      @include font-info(80px, 700, 120px);
+      top: 46%;
+    }
   }
 }
