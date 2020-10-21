@@ -7,10 +7,10 @@
     <meta name="description" content="Сайт фитнес центра Supergym">
     <meta name="Keywords" content="спорт, фитнес, омск">
     <title>Fitness</title>
-    <link rel="preload" href="/fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/BebasNeue-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/BebasNeue-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -102,9 +102,9 @@
         <div class="tabs__wrapper">
           <h2>Абонементы</h2>
           <div class="tabs__header">
-            <button type="button" class="tabs__trigger active" data-tab="1">1 месяц</button>
-            <button type="button" class="tabs__trigger" data-tab="2">6 месяцев</button>
-            <button type="button"class="tabs__trigger" data-tab="3">12 месяцев</button>
+            <button type="button" class="tabs__trigger active" data-tab="1" aria-label="1 месяц">1 месяц</button>
+            <button type="button" class="tabs__trigger" data-tab="2" aria-label="6 месяцев">6 месяцев</button>
+            <button type="button" class="tabs__trigger" data-tab="3" aria-label="12 месяцев">12 месяцев</button>
           </div>
           <ul class="tabs__content">
             <li class="tabs__membership membership active" data-tab="1">
@@ -221,7 +221,7 @@
       <section class="trainers" id="trainers">
         <h2>Тренеры</h2>
         <div class="trainers__slider trainers-slider">
-          <div class="trainers-slider__container swiper-container">
+          <div class="trainers-slider__container swiper-container-s1">
             <div class="trainers-slider__wrapper swiper-wrapper">
               <div class="trainers-slider__item swiper-slide">
                 <picture>
@@ -453,36 +453,38 @@
       <section class="reviews">
         <h2>Отзывы</h2>
         <div class="reviews__slider reviews-slider">
-          <ul class="reviews-slider__list">
-            <li class="reviews-slider__item visible">
-              <picture>
-                <!-- 1х: 68px; 2x: 136px -->
-                <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
-                <!-- 1х: 80px; 2x: 160px -->
-                <source srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
-                <!-- 1х: 80px; 2x: 160px -->
-                <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" alt="Фото автора отзыва" width="80" height="80" loading="lazy">
-              </picture>
-              <h4>Анна Орлова</h4>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
-              </p>
-            </li>
-            <li class="reviews-slider__item">
-              <picture>
-                <!-- 1х: 68px; 2x: 136px -->
-                <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
-                <!-- 1х: 80px; 2x: 160px -->
-                <source srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
-                <!-- 1х: 80px; 2x: 160px -->
-                <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" alt="Фото автора отзыва" width="80" height="80" loading="lazy">
-              </picture>
-              <h4>Ольга Орлова</h4>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей» Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто,
-              </p>
-            </li>
-          </ul>
-          <button class="reviews-slider__control reviews-slider__control--prev" type="button" aria-label="Назад"></button>
-          <button class="reviews-slider__control reviews-slider__control--next" type="button" aria-label="Вперед"></button>
+          <div class="reviews-slider__container swiper-container-s2">
+            <div class="reviews-slider__wrapper swiper-wrapper">
+              <div class="reviews-slider__item swiper-slide">
+                <picture>
+                  <!-- 1х: 68px; 2x: 136px -->
+                  <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <source srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" alt="Фото автора отзыва" width="80" height="80" loading="lazy">
+                </picture>
+                <h4>Анна Орлова</h4>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+              <div class="reviews-slider__item swiper-slide">
+                <picture>
+                  <!-- 1х: 68px; 2x: 136px -->
+                  <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <source srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" alt="Фото автора отзыва" width="80" height="80" loading="lazy">
+                </picture>
+                <h4>Ольга Орлова</h4>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+            </div>
+            <button class="reviews-slider__control reviews-slider__control--prev" type="button" aria-label="Назад"></button>
+            <button class="reviews-slider__control reviews-slider__control--next" type="button" aria-label="Вперед"></button>
+          </div>
         </div>
       </section>
     </main>

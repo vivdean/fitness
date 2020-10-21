@@ -75,6 +75,10 @@
   transform: translateY(-50%);
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.4;
+  }
+
   &--prev {
     background-image: url("../img/arrow-right.svg");
     left: 0;
